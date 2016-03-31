@@ -1,0 +1,57 @@
+﻿<%- include('partials/header') %>
+<div class="form-container">
+ 
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    <div ng-app="login" ng-controller="loginCtrl">
+       <div data-role="controlgroup" data-type="horizontal">
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-power ui-btn-icon-left" ng-click="myFunc()">login</a>
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left" >Ready</a>
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-audio ui-btn-icon-left" >answer</a>
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-phone ui-btn-icon-left" >call</a>
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-gear ui-btn-icon-left" >conference</a>
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-minus ui-btn-icon-left" >hold</a>
+             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-action ui-btn-icon-left" >transfer</a>
+        </div>
+     <div ng-show="showMe">
+     <form method="post">
+        
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" value="<%= locals.username || '' %>" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" />
+        </div>
+        <div class="form-group">
+             <div data-role="controlgroup" data-type="horizontal">
+            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-icon-power ui-btn-icon-left">Login</button>
+            <a href="/register" class="ui-btn ui-corner-all ui-shadow ui-icon-user ui-btn-icon-left">Register</a>
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+<hr>
+<video width="300" height="400" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<iframe src="http://localhost:8080" width="650" height="400"></iframe>
+</div>
+<script>
+  var app = angular.module('login', []);
+  app.controller('loginCtrl', function($scope) {
+    $scope.showMe = false;
+    $scope.myFunc = function() {
+      $scope.showMe = !$scope.showMe;
+    }
+  });
+</script>
+<%- include('partials/footer') %>
