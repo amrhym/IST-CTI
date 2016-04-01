@@ -7,7 +7,7 @@
     <% if(locals.success) { %>
         <div class="alert alert-success"><%= success %></div>
     <% } %>
-    <div ng-app="login" ng-controller="loginCtrl">
+    <div ng-app="login_ist" ng-controller="loginCtrl">
        <div data-role="controlgroup" data-type="horizontal">
              <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-power ui-btn-icon-left" ng-click="myFunc()">login</a>
              <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left" >Ready</a>
@@ -37,6 +37,7 @@
     </form>
     </div>
     </div>
+    </div>
 <hr>
 <video width="300" height="400" controls>
   <source src="movie.mp4" type="video/mp4">
@@ -46,7 +47,7 @@ Your browser does not support the video tag.
 <iframe src="http://localhost:8080" width="650" height="400"></iframe>
 </div>
 <script>
-  var app = angular.module('login', []);
+  var app = angular.module('login_ist', []);
   app.controller('loginCtrl', function($scope) {
     $scope.showMe = false;
     $scope.myFunc = function() {
