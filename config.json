@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "localhost:27017/ISTCTI",
+    "connectionString": " mongodb://test:test@ds061464.mlab.com:61464/amrhym/ISTCTI",
     "apiUrl":  "http://localhost:3000/api",
     "secret": "IST"
 }
