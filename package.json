@@ -1,6 +1,6 @@
 {
-    "name": "IST-CTI-Mamdouh",
-    "description": "IST-CTI-Mamdouh",
+    "name": "IST-CTI",
+    "description": "IST-CTI",
     "dependencies": {
         "bcryptjs": "^2.1.0",
         "body-parser": "^1.13.2",
