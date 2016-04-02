@@ -1,4 +1,6 @@
 ﻿<%- include('partials/header') %>
+<h1>Hi {{vm.user.firstName}}!!</h1>
+
     <div class="form-container">
 
      <% if(locals.error) { %>
@@ -23,7 +25,7 @@
                             </div>
                             </div>
                             <div class="form-container" >
-                                 <hr>
+                                 
                                 <form method="post">
 
                                     <div class="form-group">
@@ -52,15 +54,4 @@
                             </div>
                         </div>
     </div>
-    
-<script>
-    var app = angular.module('login_ist', []);
-    app.controller('loginCtrl', function($scope) {
-    $scope.showMe = false;
-    $scope.myFunc = function()
-    {
-    $scope.showMe = !$scope.showMe;
-    }
-  });
-</script>
     <%- include('partials/footer') %>
