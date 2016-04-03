@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://test:test@ds011890.mlab.com:11890/heroku_41nwlwz9",
+    "connectionString": "mongodb://test:test@ds061464.mlab.com:61464/amrhym",
     "apiUrl":  "http://localhost:3000/api",
     "secret": "IST"
 }
